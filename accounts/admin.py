@@ -11,6 +11,16 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = CustomUser
+    fieldsets = (
+        (None, {"fields": ("username", "email", "password")}),
+        (
+            "Toggl Settings",
+            {
+                "classes": ("collapse",),
+                "fields": ("toggl_api_key", "workspace_id", "project_id", "tags"),
+            },
+        ),
+    )
     list_display = [
         "email",
         "username",

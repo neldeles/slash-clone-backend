@@ -16,6 +16,7 @@ django-cors-headers==3.11.0
 django-extensions==3.1.5
 django-model-utils==4.2.0
 djangorestframework==3.13.1
+djfernet==0.8.1
 environs==9.5.0
 idna==3.3
 marshmallow==3.14.1
