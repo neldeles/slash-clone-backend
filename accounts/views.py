@@ -19,5 +19,11 @@ class AccountUpdateView(generics.UpdateAPIView):
 
     def get_serializer(self, *args, **kwargs):
         kwargs["partial"] = True
-        print(self.request)
+        # print("request", self.request.data)
         return super(AccountUpdateView, self).get_serializer(*args, **kwargs)
+
+    def perform_update(self, serializer):
+        if self.request.data["toggl_api_key"] == "":
+            serializer.save(workspace_id=None, project_id=None, tags=None)
+        else:
+            serializer.save()
