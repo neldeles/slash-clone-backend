@@ -61,9 +61,14 @@ CORS_ORIGIN_WHITELIST = (
     "http://localhost:8000",
     "https://pure-wildwood-16119.herokuapp.com",
     "https://slash-clone.netlify.app",
+    "https://api.track.toggl.com",
 )
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:3000", "https://slash-clone.netlify.app"]
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://slash-clone.netlify.app",
+    "https://api.track.toggl.com",
+]
 
 ROOT_URLCONF = "config.urls"
 
