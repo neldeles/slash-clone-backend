@@ -56,13 +56,15 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CORS_ORIGIN_WHITELIST = (
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "https://pure-wildwood-16119.herokuapp.com",
-    "https://slash-clone.netlify.app",
-    "https://api.track.toggl.com",
-)
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ORIGIN_WHITELIST = (
+#     "http://localhost:3000",
+#     "http://localhost:8000",
+#     "https://pure-wildwood-16119.herokuapp.com",
+#     "https://slash-clone.netlify.app",
+#     "https://api.track.toggl.com",
+# )
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
